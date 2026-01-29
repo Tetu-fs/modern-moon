@@ -15,8 +15,9 @@
         devShells.default = pkgs.mkShell {
           buildInputs = with pkgs; [
             bun
-            # ZedでのTypeScript開発に必須のLSP
             nodePackages.typescript-language-server
+            git
+            gh
           ];
 
           shellHook = ''
